@@ -1,0 +1,55 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<link rel= "stylesheet" href="{%static 'style.css'%}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ETERN9</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <h1>Pedro Markus Soares</h1> 
+<p><b>O meu maior ídolo. </b><u>Fred, do Fluminense</u>, marcou muito a minha vida sendo desde pequeno o grande jogador do meu time de coração. Desde pequeno o idolatro e tenho muita felicidade de poder ter acompanhando a linda história dele vestido a camisa tricolor. <mark>Estive presente no estádio no jogo em que ele marcou seu ultimo gol, e também na sua despedida dos gramados. </mark><I>ETERN9.</I>
+</p>
+  <div class="blue-center">
+    <img src="https://conteudo.imguol.com.br/c/esporte/ae/2022/07/07/fluminense-e-torcedores-tricolores-preparam-uma-grande-festa-para-a-despedida-de-fred-dos-gramados-1657224712500_v2_900x506.jpg" height="400">
+    </div>
+  <h2>Números do Fred pelo Fluminense:</h2>
+    <!--<ul>
+      <li>GOLS: 199</li> 
+      <li>TÍTULOS: 8</li>
+      <li>PARTIDAS: 382</li>
+      <li>PASSAGENS: 2 (2006-2016) (2020-2022)</li>
+      <li>CAMISA: 9</li>
+    </ul>-->
+  <ul>
+    {% for numero in num %}
+      <li>{{ numero.categoria }} : {{ numero.numeros }} <a href="/num/update/{{numero.id}}">Atualizar</a>
+      <a href="/num/delete/{{numero.id}}"> Remover</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href= "/num">Adicionar nova estatistica</a>
+
+  <h2>Momentos que mais me marcaramdo Fred:</h2>
+  
+  <ol>
+    {% for dia in dias %}
+    <li>{{ dia.descricao }} , em {{ dia.ano}} <a href="/dias/update/{{dia.id}}">Atualizar</a>
+  <a href="/dias/delete/{{dia.id}}">Remover</a>
+</li>
+    {% endfor %}
+  </ol>
+  <a href="/dias">Adicionar nova data</a>
+  <table style="width:100%">
+  
+    <tr>
+      {% for in in inf%}
+      <th>{{in.informacoes}}</th>
+      {% endfor %}
+    </tr>
+  </table>
+  <a href="https://www.fluminense.com.br/noticia/despedida-de-fred-deixa-maracana-ainda-mais-bonito/"target="_blank">https://www.fluminense.com.br/noticia/despedida-de-fred-deixa-maracana-ainda-mais-bonito/</a>
+</body>
+</html>

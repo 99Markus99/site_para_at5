@@ -1,0 +1,16 @@
+<h1>{{type}} Categoria</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Categoria: </label>
+    <input name="categoria" value="{{numero.categoria}}">
+  </div>
+  
+  <div>
+    <label>Numero: </label>
+    <input type="number" name = "numero" value="{{numero.numeros}}">
+  </div>
+
+  <input type="submit" value = "Registrar">
+</form>

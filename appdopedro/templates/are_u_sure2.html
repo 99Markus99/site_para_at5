@@ -1,0 +1,9 @@
+<h1>{{type}} Datas</h1>
+
+Você tem certeza que quer deletar a data "{{dia.descricao}}"
+
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" value ="Sim" name = "Sim">
+  <input type="submit" value ="Não" name = "Não">
+</form>

@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: url(https://img.freepik.com/fotos-gratis/fundo-de-papel-de-espaco-de-design-texturizado_53876-42312.jpg) ;
+}
+.blue-center{
+  display: flex;
+  justify-content: center;
+}
+h1{
+  font-family: Verdana;
+  text-align: center;
+}
+p{
+  font-size: 20px;
+}
+h2{
+  color: darkred;
+}
+ul{
+  color: darkgreen;
+}
+ol{
+  color: gray;
+}

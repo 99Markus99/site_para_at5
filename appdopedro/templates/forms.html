@@ -1,0 +1,24 @@
+<h1>{{type}} Datas</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Descricao: </label>
+    <input name="descricao" value="{{dia.descricao}}">
+  </div>
+  
+  <div>
+    <label>Ano: </label>
+    <input type="number" name="ano" value="{{dia.ano}}">
+  </div>
+
+  <div>
+    <label>Impacto: </label>
+    <select name="impacto" value="{{dia.impacto}}">
+      {% for opt in options %}
+        <option value="{{ opt.1 }}">{{ opt.1 }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <input type="submit" value = "Registrar">
+</form>

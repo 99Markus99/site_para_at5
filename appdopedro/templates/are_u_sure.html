@@ -1,0 +1,9 @@
+<h1>{{type}} Categorias</h1>
+
+Você tem certeza que quer deletar a categoria "{{numero.categoria}}"
+
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" value ="Sim" name = "Sim">
+  <input type="submit" value ="Não" name = "Não">
+</form>
